@@ -1,9 +1,9 @@
 // 1. Databaza e Sureve të ndara sipas Xhuzeve
 const surahs = {
-    juz30: ["En-Nebe", "En-Naziat", "Abese", "Et-Tekwir", "El-Infitar", "El-Mutaffifin", "El-Inshikak", "El-Buruj", "Et-Tarik", "El-A'la", "El-Ghashiyah", "El-Fejr", "El-Beled", "Esh-Shems", "El-Lejl", "Ed-Duha", "Esh-Sherh", "Et-Tin", "El-Alak", "El-Kadr", "El-Bejjineh", "Ez-Zelzele", "El-Adijat", "El-Kari'ah", "Et-Tekathur", "El-Asr", "El-Humezeh", "El-Fil", "Kurejsh", "El-Ma'un", "El-Kewther", "El-Kafirun", "En-Nasr", "El-Mesed", "El-Ihlas", "El-Felek", "En-Nas"],
-    juz29: ["El-Mulk", "El-Kalem", "El-Hakkah", "El-Ma'arij", "Nuh", "El-Xhinn", "El-Muzzemmil", "El-Mudethir", "El-Kijameh", "El-Insan", "El-Murselat"],
+    juz30: ["En-Nebe", "En-Naziat", "Abese", "Et-Tekwir", "El-Infitar", "El-Mutaffifin", "El-Inshikak", "El-Buruj", "Et-Tarik", "El-Ala", "El-Ghashiyah", "El-Fejr", "El-Beled", "Esh-Shems", "El-Lejl", "Ed-Duha", "Esh-Sherh", "Et-Tin", "El-Alak", "El-Kadr", "El-Bejjineh", "Ez-Zelzele", "El-Adijat", "El-Kariah", "Et-Tekathur", "El-Asr", "El-Humezeh", "El-Fil", "Kurejsh", "El-Maun", "El-Kewther", "El-Kafirun", "En-Nasr", "El-Mesed", "El-Ihlas", "El-Felek", "En-Nas"],
+    juz29: ["El-Mulk", "El-Kalem", "El-Hakkah", "El-Maarij", "Nuh", "El-Xhinn", "El-Muzzemmil", "El-Mudethir", "El-Kijameh", "El-Insan", "El-Murselat"],
     juz28: ["El-Muxhadeleh", "El-Hashr", "El-Mumtehineh", "Es-Saff", "El-Xhumuah", "El-Munafikun", "Et-Tegabun", "Et-Talak", "Et-Tahrim"],
-    juz27: ["Edh-Dharijat", "Et-Tur", "En-Nexhm", "El-Kamer", "Er-Rahman", "El-Waki'ah", "El-Hadid"]
+    juz27: ["Edh-Dharijat", "Et-Tur", "En-Nexhm", "El-Kamer", "Er-Rahman", "El-Wakiah", "El-Hadid"]
 };
 
 // 2. Funksioni për hapjen/mbylljen e Xhuzeve (Accordion)
@@ -70,4 +70,5 @@ function loadSurahs() {
 }
 
 // Nis ngarkimin kur faqja është gati
+
 window.onload = loadSurahs;
