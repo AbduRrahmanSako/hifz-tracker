@@ -1,122 +1,54 @@
 :root {
-    --bg: #121212;
-    --card: #1e1e1e;
-    --text: #e0e0e0;
-    --gold: #d4af37;
-    --green: #27ae60;
+    --bg: #121212; --card: #1e1e1e; --text: #e0e0e0;
+    --gold: #d4af37; --green: #27ae60; --red: #c0392b;
 }
 
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0; padding-bottom: 50px;
-}
-
-header {
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(to bottom, #1a1a1a, var(--bg));
-}
-
-.logo { font-size: 3rem; margin-bottom: 10px; }
-
+body { background-color: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; padding-bottom: 50px; }
+header { text-align: center; padding: 20px; background: #1a1a1a; }
 .container { max-width: 600px; margin: auto; padding: 15px; }
 
-.juz-card {
-    background: var(--card);
-    margin-bottom: 15px;
-    border-radius: 12px;
-    border-left: 5px solid var(--gold);
-    overflow: hidden;
-}
+.juz-card { background: var(--card); margin-bottom: 10px; border-radius: 10px; overflow: hidden; border-left: 4px solid var(--gold); }
+.juz-header { padding: 15px; display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; }
 
-.juz-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+.surah-item { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #333; }
+.surah-item.completed { background: rgba(39, 174, 96, 0.15); }
+.surah-item.completed .surah-name { text-decoration: line-through; opacity: 0.6; }
 
-.surah-list { display: none; padding: 10px; background: #252525; }
-
-.surah-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-bottom: 1px solid #333;
-}
-
-.surah-info { flex: 1; }
-.surah-name { font-size: 1rem; color: var(--gold); font-weight: bold; }
-
-.counter-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.count-display {
-    background: #333;
-    padding: 5px 12px;
-    border-radius: 5px;
-    min-width: 20px;
-    text-align: center;
-}
-
-button {
-    background: var(--green);
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button.minus { background: #c0392b; }
-
-.status-check {
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-footer { text-align: center; font-size: 0.8rem; margin-top: 30px; opacity: 0.7; }
-
-/* Stili kur surja markohet si e kryer */
-.surah-item.completed {
-    background-color: rgba(39, 174, 96, 0.1); /* Sfond i lehtë i gjelbër */
-    border-right: 4px solid var(--green);
-}
-
-.surah-item.completed .surah-name {
-    text-decoration: line-through;
-    opacity: 0.5;
-    color: #fff;
-}
-
-/* Butoni Tick */
-.tick-btn {
-    background: transparent;
-    border: 2px solid #444;
-    color: #444;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
+#mushaf-image-container {
+    min-height: 400px;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
 }
 
-.surah-item.completed .tick-btn {
-    background: var(--green);
-    border-color: var(--green);
-    color: white;
+#page-img {
+    max-width: 100%;
+    height: auto;
+    display: block !important;
+    opacity: 1 !important;
 }
+
+.tick-btn { background: transparent; border: 2px solid #444; color: #444; width: 30px; height: 30px; border-radius: 50%; margin-right: 12px; cursor: pointer; }
+.completed .tick-btn { background: var(--green); border-color: var(--green); color: white; }
+
+.surah-info { flex: 1; }
+.surah-name { color: var(--gold); font-weight: bold; cursor: pointer; font-size: 1.1rem; text-decoration: underline; }
+
+.counter-section { display: flex; align-items: center; gap: 8px; }
+.count-display { background: #333; padding: 4px 10px; border-radius: 4px; min-width: 20px; text-align: center; }
+button.plus { background: var(--green); border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+button.minus { background: var(--red); border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+
+/* Modal & Page styles */
+.modal { position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; }
+.modal-content { position: relative; width: 95%; max-width: 450px; background: white; border-radius: 10px; overflow: hidden; }
+.close-modal { position: absolute; top: 10px; right: 20px; font-size: 30px; color: black; cursor: pointer; z-index: 2001; }
+#page-img { width: 100%; height: auto; display: block; }
+
+.page-card { background: var(--card); padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-right: 3px solid var(--gold); }
+.page-link { color: var(--gold); cursor: pointer; font-weight: bold; text-decoration: underline; }
+.back-btn { background: #333; color: white; border: none; padding: 10px; border-radius: 5px; margin-bottom: 20px; cursor: pointer; }
+.main-cat-title { text-align: center; color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
+
+footer { text-align: center; padding: 30px; opacity: 0.6; }
