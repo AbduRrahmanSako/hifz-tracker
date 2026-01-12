@@ -1,0 +1,122 @@
+:root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #e0e0e0;
+    --gold: #d4af37;
+    --green: #27ae60;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding-bottom: 50px;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to bottom, #1a1a1a, var(--bg));
+}
+
+.logo { font-size: 3rem; margin-bottom: 10px; }
+
+.container { max-width: 600px; margin: auto; padding: 15px; }
+
+.juz-card {
+    background: var(--card);
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-left: 5px solid var(--gold);
+    overflow: hidden;
+}
+
+.juz-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.surah-list { display: none; padding: 10px; background: #252525; }
+
+.surah-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.surah-info { flex: 1; }
+.surah-name { font-size: 1rem; color: var(--gold); font-weight: bold; }
+
+.counter-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.count-display {
+    background: #333;
+    padding: 5px 12px;
+    border-radius: 5px;
+    min-width: 20px;
+    text-align: center;
+}
+
+button {
+    background: var(--green);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.minus { background: #c0392b; }
+
+.status-check {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+footer { text-align: center; font-size: 0.8rem; margin-top: 30px; opacity: 0.7; }
+
+/* Stili kur surja markohet si e kryer */
+.surah-item.completed {
+    background-color: rgba(39, 174, 96, 0.1); /* Sfond i lehtë i gjelbër */
+    border-right: 4px solid var(--green);
+}
+
+.surah-item.completed .surah-name {
+    text-decoration: line-through;
+    opacity: 0.5;
+    color: #fff;
+}
+
+/* Butoni Tick */
+.tick-btn {
+    background: transparent;
+    border: 2px solid #444;
+    color: #444;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.surah-item.completed .tick-btn {
+    background: var(--green);
+    border-color: var(--green);
+    color: white;
+}
