@@ -1,54 +1,13 @@
-:root {
-    --bg: #121212; --card: #1e1e1e; --text: #e0e0e0;
-    --gold: #d4af37; --green: #27ae60; --red: #c0392b;
-}
-
-body { background-color: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; padding-bottom: 50px; }
-header { text-align: center; padding: 20px; background: #1a1a1a; }
-.container { max-width: 600px; margin: auto; padding: 15px; }
-
-.juz-card { background: var(--card); margin-bottom: 10px; border-radius: 10px; overflow: hidden; border-left: 4px solid var(--gold); }
-.juz-header { padding: 15px; display: flex; justify-content: space-between; cursor: pointer; font-weight: bold; }
-
-.surah-item { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #333; }
-.surah-item.completed { background: rgba(39, 174, 96, 0.15); }
-.surah-item.completed .surah-name { text-decoration: line-through; opacity: 0.6; }
-
-#mushaf-image-container {
-    min-height: 400px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#page-img {
-    max-width: 100%;
-    height: auto;
-    display: block !important;
-    opacity: 1 !important;
-}
-
-.tick-btn { background: transparent; border: 2px solid #444; color: #444; width: 30px; height: 30px; border-radius: 50%; margin-right: 12px; cursor: pointer; }
-.completed .tick-btn { background: var(--green); border-color: var(--green); color: white; }
-
-.surah-info { flex: 1; }
-.surah-name { color: var(--gold); font-weight: bold; cursor: pointer; font-size: 1.1rem; text-decoration: underline; }
-
-.counter-section { display: flex; align-items: center; gap: 8px; }
-.count-display { background: #333; padding: 4px 10px; border-radius: 4px; min-width: 20px; text-align: center; }
-button.plus { background: var(--green); border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
-button.minus { background: var(--red); border: none; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
-
-/* Modal & Page styles */
-.modal { position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; }
-.modal-content { position: relative; width: 95%; max-width: 450px; background: white; border-radius: 10px; overflow: hidden; }
-.close-modal { position: absolute; top: 10px; right: 20px; font-size: 30px; color: black; cursor: pointer; z-index: 2001; }
-#page-img { width: 100%; height: auto; display: block; }
-
-.page-card { background: var(--card); padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; border-right: 3px solid var(--gold); }
-.page-link { color: var(--gold); cursor: pointer; font-weight: bold; text-decoration: underline; }
-.back-btn { background: #333; color: white; border: none; padding: 10px; border-radius: 5px; margin-bottom: 20px; cursor: pointer; }
-.main-cat-title { text-align: center; color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
-
-footer { text-align: center; padding: 30px; opacity: 0.6; }
+:root { --bg: #121212; --gold: #d4af37; --text: #e0e0e0; }
+body { background: var(--bg); color: var(--text); font-family: sans-serif; margin: 0; }
+.container { max-width: 500px; margin: auto; padding: 15px; }
+.juz-card { background: #1e1e1e; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--gold); }
+.juz-header { padding: 15px; display: flex; justify-content: space-between; cursor: pointer; }
+.surah-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #333; }
+.surah-name { color: var(--gold); cursor: pointer; text-decoration: underline; flex: 1; }
+.modal { position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; }
+.modal-content { position: relative; width: 95%; height: 90vh; margin: auto; background: white; border-radius: 10px; }
+.close-modal { position: absolute; top: 10px; right: 20px; font-size: 30px; color: black; z-index: 2001; cursor: pointer; }
+iframe { width: 100%; height: 100%; border: none; }
+.back-btn { background: #333; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px; }
+footer { text-align: center; padding: 20px; opacity: 0.5; }
